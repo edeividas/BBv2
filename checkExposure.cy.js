@@ -8,20 +8,24 @@ describe('Check exposure bets', () => {
 
             if(text.trim() === 'Game Markets') {
                 cy.log('Over/Under category currently selected.')
-                selectedMarket = 'GFM';
+                selectedMarket = 'Over/Under';
             }
-            if(selectedMarket === 'GFM') {
+            if(selectedMarket === 'GOver/Under') {
                 cy.log('running test against Over/Under section')
                 cy.get('.main-stat--open').first().click()
+                cy.wait(1000)
                 cy.get('.over-under-block__selector').not('.inactive').first().click()
                 cy.get('.wager').type(1)
                 cy.get('.bat-slip__item__block-btn__btn')
             } else {
                 cy.log('Non O/U market category is currently selected')
                 cy.get('.main-markets__item--active').click()
+                
+                
+                
                 cy.get('.tiered-block__item__top').first().click()
-                cy.get('.tiered-block__item__top').first().click()
-                cy.get('.over-under-block__selector').not('.inactive').first().click()
+               
+                cy.get('.over-under-block__selector').not('.inactive').first().click({force:true})
                 cy.get('.wager').type(1)
                 cy.get('.bat-slip__item__block-btn__btn')
                 
