@@ -24,11 +24,7 @@ describe('Check exposure bets', () => {
                 
                 
                 cy.get('.tiered-block__item__top').click()
-<<<<<<< HEAD
-               
-=======
                 cy.get('.over-under-block__selector').not('.inactive').first().click({force:true})
->>>>>>> 1526b7795f31285b2366f9f31513fffabb7833e5
                 cy.get('.over-under-block__selector').not('.inactive').first().click({force:true})
                 cy.get('.wager').type(1)
                 cy.get('.bat-slip__item__block-btn__btn')
