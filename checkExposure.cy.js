@@ -10,7 +10,7 @@ describe('Check exposure bets', () => {
                 cy.log('Over/Under category currently selected.')
                 selectedMarket = 'Over/Under';
             }
-            if(selectedMarket === 'GOver/Under') {
+            if(selectedMarket === 'Over/Under') {
                 cy.log('running test against Over/Under section')
                 cy.get('.main-stat--open').first().click()
                 cy.wait(1000)
@@ -24,7 +24,11 @@ describe('Check exposure bets', () => {
                 
                 
                 cy.get('.tiered-block__item__top').click()
+<<<<<<< HEAD
                
+=======
+                cy.get('.over-under-block__selector').not('.inactive').first().click({force:true})
+>>>>>>> 27b0a74faa429a7679650b85467caf77ba4c0d9d
                 cy.get('.over-under-block__selector').not('.inactive').first().click({force:true})
                 cy.get('.wager').type(1)
                 cy.get('.bat-slip__item__block-btn__btn')
