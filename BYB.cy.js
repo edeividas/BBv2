@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-describe('empty spec', () => {
-  it('passes', () => {
-    cy.visit('https://example.cypress.io')
+describe('Quick Picks', () => {
+  it('add player and statistic in QP and add it to betslip', () => {
+    cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test&demo=test&user=deividas1')
   })
-=======
-describe('kazka daro', () => {
-    it('ssssss', () => {
-        cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test&demo=test&user=deividas1')
-    })
->>>>>>> 1526b7795f31285b2366f9f31513fffabb7833e5
 })
