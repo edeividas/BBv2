@@ -23,7 +23,7 @@ describe('Check exposure bets', () => {
                 
                 
                 
-                cy.get('.tiered-block__item__top').first().click()
+                cy.get('.tiered-block__item__top').click()
                
                 cy.get('.over-under-block__selector').not('.inactive').first().click({force:true})
                 cy.get('.wager').type(1)
